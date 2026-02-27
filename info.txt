@@ -1,0 +1,45 @@
+Tutorial Passo a Passo para Rodar o Projeto Code Burguer
+
+Olá, Magno! Aqui vai um tutorial completo e atualizado (fevereiro de 2026) para rodar o projeto Code Burguer localmente no seu computador em Volta Redonda. Assumindo que você já tem os arquivos atualizados (de nossas conversas: package.json, src/App.jsx, styles, etc.). Se algo faltar, avise!
+
+Pré-requisitos:
+- Node.js instalado (versão 18 ou superior). Baixe em nodejs.org se não tiver. Verifique com 'node -v' no terminal.
+- Um editor de código como VS Code.
+- Terminal aberto (PowerShell no Windows).
+
+Passo 1: Crie ou Entre na Pasta do Projeto
+- Abra o terminal.
+- Crie uma pasta: mkdir code-burguer
+- Entre nela: cd code-burguer
+- Coloque todos os arquivos do projeto aqui (src/, public/, package.json, etc.).
+  (Se tiver Git: git clone seu-repo.git && cd code-burguer)
+
+Passo 2: Corrija o package.json (se necessário)
+- Abra package.json no editor.
+- Mude 'type': 'module' para 'type': 'commonjs' (ou remova a linha).
+- Salve.
+
+Passo 3: Instale as Dependências
+- No terminal: npm install
+  (Se erro, delete node_modules e package-lock.json: rm -rf node_modules package-lock.json, depois npm install novamente)
+
+Passo 4: Corrija Imports (se der erro de 'Module not found')
+- Abra src/index.jsx (ou index.js):
+  - Adicione extensões: import Global from './globalStyle.js'; import Routes from './routes.js';
+- Faça o mesmo em outros arquivos se necessário.
+
+Passo 5: Rode o Projeto
+- No terminal: npm start
+- Abre em http://localhost:3000 no navegador.
+- Teste: Preencha nome e pedido, clique 'Realizar pedido'.
+
+Passo 6: Parar e Build (Opcional)
+- Parar: Ctrl + C no terminal.
+- Build para produção: npm run build (cria pasta 'build/').
+
+Problemas Comuns:
+- Porta ocupada: Aceite outra porta.
+- Erros de depreciação: Ignore ou rode npm audit fix.
+- Backend: Certifique-se que https://code-burguer-backend.vercel.app funciona.
+
+Se erro, mande o log! Boa sorte, Magno! 🍔
